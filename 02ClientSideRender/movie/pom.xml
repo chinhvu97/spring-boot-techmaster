@@ -10,9 +10,9 @@ http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>vn.techmaster</groupId>
-	<artifactId>book</artifactId>
+	<artifactId>movie</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>book</name>
+	<name>movie</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>16</java.version>

@@ -1,30 +1,30 @@
 <template>
-  <h1>Book List</h1>
-  <BookList :books="books" />
+  <h1>Movie List</h1>
+  <MovieList :movies="movies"  books=""/>
 </template>
 
 <script>
-import BookList from './components/BookList.vue'
 import axios from "axios"
+import MovieList from "./components/MovieList.vue";
 export default {
   components: {
-    BookList,
+    MovieList,
   },
   data() {
     return {
-      books: [],
+      movies: [],
       loading: false,
       error: null,
     }
   },
   methods: {    
-    async fetchBooks() {
+    async fetchMovies() {
       try {
         this.error = null
         this.loading = true
-        const url = `http://localhost:8080/api/books`
+        const url = `http://localhost:8080/movies`
         const response = await axios.get(url)       
-        this.books = response.data
+        this.movies = response.data
       } catch (err) {       
         console.log(err)
       }
@@ -32,7 +32,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchBooks()
+    this.fetchMovies()
   },
 
 }
@@ -43,8 +43,9 @@ export default {
   font-family: "SF Mono", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left;
+  text-align: center;
   color: #2c3e50;
-  margin-top: 20px;
+  margin-top: 50px;
+
 }
 </style>
