@@ -23,6 +23,7 @@
 - Tìm Book bằng stream.filter (giả định là Id không trùng nhau)
 
 ![getBookRepo](screenshots/get-book-repo.png)
+ 
 4. Test
 
 ![list](screenshots/book-list.png)
@@ -40,6 +41,7 @@
 
 ![repo-post](screenshots/repo-post.png)
 3. Test
+  
 ![test-post](screenshots/test-post.png)
 
 ### PutMapping
@@ -60,14 +62,17 @@
 - Nhận param id và truyền xuống Service
 
 ![controller-delete](screenshots/controller-delete.png)
+ 
 2. Service
 - Tìm book bằng hàm getBook, nếu tìm được thì truyền xuống Repo xóa; nếu không tìm được thì không làm gì cả
 
 ![service-delete](screenshots/service-delete.png)
+ 
 3. Repo
 - Xóa khỏi collection
 
 ![repo-delete](screenshots/repo-delete.png)
+ 
 4. Test
 ![test-delete](screenshots/test-delete.png)
 
