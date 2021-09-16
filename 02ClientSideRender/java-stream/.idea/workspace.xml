@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b71a2f1-b82d-41b3-b85b-ff1eceeb11c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/screenshots/fetchData.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/person.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+    <list default="true" id="4b71a2f1-b82d-41b3-b85b-ff1eceeb11c4" name="Changes" comment="update README">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +76,17 @@
       <option name="presentableId" value="Default" />
       <updated>1631605941944</updated>
       <workItem from="1631605943636" duration="7198000" />
-      <workItem from="1631633826394" duration="421000" />
+      <workItem from="1631633826394" duration="1354000" />
+      <workItem from="1631710291441" duration="744000" />
     </task>
+    <task id="LOCAL-00001" summary="update README">
+      <created>1631634465568</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631634465568</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,5 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README" />
   </component>
 </project>
