@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:insert="template.html :: header('Author')"><title></title></head>
+<body>
+<header th:insert="template.html :: topmenu"></header>
+<h1 class="align-center">Best Authors</h1>
+<div class="container">
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Born</th>
+            <th>Nationality</th>
+            <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="author, iter: ${authors}">
+            <td th:text="${iter.index + 1}"></td>
+            <td th:text="${author.name}"></td>
+            <td th:text="${author.DOB}"></td>
+            <td th:text="${author.country}"></td>
+            <td>
+                <span th:if="${author.gender == 'male'}">🧑</span>
+                <span th:unless="${author.gender == 'male'}">👩</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/form.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>BMI</title>
+</head>
+<body>
+<header>
+    <header th:insert="template.html :: topmenu"></header>
+</header>
+<div class="form-container">
+    <div class="center">
+        <h1>Calculate BMI Score</h1>
+        <form action="#" th:action="@{/bmi}" th:object="${bmiRequest}" method="post">
+            <div class="inputbox">
+                <input type="text"  th:field="*{height}">
+                <span>Height (m)</span>
+            </div>
+            <div class="inputbox">
+                <input type="text"  th:field="*{weight}">
+                <span>Weight (kg)</span>
+            </div>
+            <div class="inputbox">
+                <button type="submit" class="modal-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="center" th:if="${bmiResult} != null">
+        <h1>Result</h1>
+        <h3>BMI Index: <span th:text="${bmiResult?.bmiIndex}"></span>
+            <br>Phân loại: <span th:text="${bmiResult?.category}"></span>
+            <br>Khuyến cáo: <span th:text="${bmiResult?.recommendation}"></span>
+        </h3>
+    </div>
+</div>
+</body>
+</html>

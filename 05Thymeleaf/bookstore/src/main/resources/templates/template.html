@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="header(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/css/nav.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="nav-container" th:fragment="topmenu">
+    <nav id="navbar" class="">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <a th:href="@{home}"><i class="fa fa-github"></i> My Corner</a>
+            </div>
+            <ul id="menu">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/author}">Author</a></li>
+                <li><a th:href="@{/bmi}">BMI</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

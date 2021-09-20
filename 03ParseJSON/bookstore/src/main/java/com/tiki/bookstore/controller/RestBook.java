@@ -15,8 +15,12 @@ import java.util.Optional;
 @RequestMapping("/book/")
 public class RestBook {
 
-    @Autowired
     private BookService bookService;
+
+    @Autowired
+    public RestBook(BookService bookService) {
+        this.bookService = bookService;
+    }
 
     @GetMapping("id")
     public ResponseEntity<Book> getBook(@RequestParam(value = "id") int id) {
