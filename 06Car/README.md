@@ -23,7 +23,7 @@
 ![view-search](screenshots/view-list.png)
 ![view-search](screenshots/view-search.png)
 ![view-sort](screenshots/view-sort.png)
-  - Test\
+  - Test
     - home
   ![test-home](screenshots/test-home.png)
     - search
@@ -33,7 +33,7 @@
   
 ### PostMapping: Add new car - direct sang trang add 
 ![controller-add](screenshots/controller-add.png)
-    (Service & Repo chỉ đơn giản là add vào list)\
+  - (Service & Repo chỉ đơn giản là add vào list)\
   - Thymeleaf: add link ở nav-bar\
 ![view-add](screenshots/view-add.png)
   - Test\
@@ -48,14 +48,14 @@
 ![test-update](screenshots/test-edit.png)
 ### Delete: dùng GetMapping delete và redirect lại home
 > Thêm modal: modal xuất hiện để confirm xóa car
-- Controller\
+- Controller  (Service & Repo chỉ đơn giản là xóa đi)\
 ![controller-delete](screenshots/controller-delete.png)
-  (Service & Repo chỉ đơn giản là xóa đi)
-- Thymeleaf:\
-  - Button toggle modal:\
-    - button\
+
+- Thymeleaf:
+  - Button toggle modal:
+    - button
   ![button](screenshots/view-button.png)
     - modal\
   ![button](screenshots/view-modal.png)
-- Test:\
+- Test:
 ![test-delete](screenshots/test-delete.png)
