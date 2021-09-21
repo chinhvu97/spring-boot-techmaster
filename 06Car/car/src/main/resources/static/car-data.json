@@ -1,5 +1,10 @@
-[{"manufacturer":"Lexus","model":"GX","price":46747,"sales":14611, "imgUrl":"photos/lexus.jpg"},
-{"manufacturer":"Mazda","model":"MX-5","price":13935,"sales":93920, "imgUrl":"photos/mazda.jpg"},
-{"manufacturer":"Lotus","model":"Esprit","price":11045,"sales":8977, "imgUrl":"photos/honda.jpg"},
-{"manufacturer":"Chevrolet","model":"Impala SS","price":44162,"sales":83933, "imgUrl":"photos/chervolet.jpg"},
-  {"manufacturer":"Toyota","model":"Camry","price":30000,"sales":96341, "imgUrl":"photos/toyota.png"}]
+[{"id":1,
+  "manufacturer":"Lexus","model":"LX-570","price":88000,"sales":17000, "imgUrl":"photos/lexus.jpg"},
+{"id":2,
+  "manufacturer":"Mazda","model":"MX-5","price":26000,"sales":81000, "imgUrl":"photos/mazda.jpg"},
+{"id":3,
+  "manufacturer":"Lotus","model":"Esprit","price":40000,"sales":8977, "imgUrl":"photos/lotus.jpg"},
+{"id":4,
+  "manufacturer":"Chevrolet","model":"Impala SS","price":31000,"sales":15000, "imgUrl":"photos/chervolet.jpg"},
+  {"id":5,
+    "manufacturer":"Toyota","model":"Camry","price":24500,"sales":90000, "imgUrl":"photos/toyota.png"}]

@@ -8,6 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 @Controller
 @RequestMapping()
 public class CarController {
@@ -15,13 +19,21 @@ public class CarController {
     private CarService carService;
 
     @GetMapping("/home")
-    public String getCars(Model model, String keyword) {
+    public String getCars(Model model, String keyword, String sortByPriceASC, String sortByPriceDESC) {
+        List<Car> cars;
 
         if (keyword != null) {//findByKeyWord
-            model.addAttribute("cars", carService.findByKeyword(keyword));
+            cars = carService.findByKeyword(keyword);
         } else {
-            model.addAttribute("cars", carService.getCars());
+            cars = carService.getCars();
         }
+
+        if (sortByPriceASC != null && cars != null) {
+            cars.sort(Comparator.comparing(Car::getPrice));
+        } else if (sortByPriceDESC != null && cars != null) {
+            cars.sort(Comparator.comparing(Car::getPrice).reversed());
+        }
+        model.addAttribute("cars", cars);
         return "home";
     }
 
@@ -50,9 +62,9 @@ public class CarController {
     @PostMapping("/update/{id}")
     public String updateCar(@PathVariable("id") Integer id,
                             Car car,
-                            BindingResult bindingResult,
-                            Model model) {
+                            BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
+            //edit again
             car.setId(id);
             return "update";
         }
