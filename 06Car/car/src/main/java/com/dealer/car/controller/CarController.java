@@ -1,10 +1,8 @@
 package com.dealer.car.controller;
 
-import com.dealer.car.exception.UserNotFoundException;
 import com.dealer.car.model.Car;
 import com.dealer.car.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -37,7 +35,7 @@ public class CarController {
     @PostMapping("/add")
     public String addCar(@ModelAttribute("newCar") Car newCar) {
         carService.addCar(newCar);
-        return "home";
+        return "redirect:home";
     }
 
 
@@ -69,7 +67,4 @@ public class CarController {
         carService.delete(car);
         return "redirect:/home";
     }
-
-
-
 }
