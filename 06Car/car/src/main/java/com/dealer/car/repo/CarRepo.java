@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Repository
 public class CarRepo {
-    private List<Car> cars = new ArrayList<>();
+    private final List<Car> cars = new ArrayList<>();
     public CarRepo() {
         try {
             File file = ResourceUtils.getFile("classpath:static/car-data.json");
