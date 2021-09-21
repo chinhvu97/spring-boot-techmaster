@@ -8,6 +8,8 @@
 ### Fetch data from json file
 - Add dependency\
 ![add-dependency](screenshots/json-dependency.png)
+- Json File
+  ![add-dependency](screenshots/json-file.png)
 - Read data from json\
 ![repo-fetch-data](screenshots/repo-fetch-data-json.png)
 ### GetMapping: Return List Car: All, Find by keyword, Sort By Price
