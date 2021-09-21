@@ -14,16 +14,16 @@
 ![repo-fetch-data](screenshots/repo-fetch-data-json.png)
 ### GetMapping: Return List Car: All, Find by keyword, Sort By Price
 - Ý tưởng: để hết trong home.html, tùy vào biến keyword/sort có được truyền vào không mà render ra list
-  - Controller
+  - Controller\
 ![controller-getmapping](screenshots/controller-get-mapping-home.png)
   - Repo (Thêm dependency commonlang để dùng StringUtils)
 ![service-findByKeyword](screenshots/repo-find-keyword.png)
 ![common-lang](screenshots/common-lang.png)
-  - Thymeleaf
+  - Thymeleaf\
 ![view-search](screenshots/view-list.png)
 ![view-search](screenshots/view-search.png)
 ![view-sort](screenshots/view-sort.png)
-  - Test
+  - Test\
     - home
   ![test-home](screenshots/test-home.png)
     - search
@@ -31,31 +31,31 @@
     - sort
   ![test-sort](screenshots/test-sort.png)
   
-### PostMapping: Add new car - direct sang trang add (Không cho update id)
+### PostMapping: Add new car - direct sang trang add 
 ![controller-add](screenshots/controller-add.png)
-    (Service & Repo chỉ đơn giản là add vào list)
-  - Thymeleaf: add link ở nav-bar
+    (Service & Repo chỉ đơn giản là add vào list)\
+  - Thymeleaf: add link ở nav-bar\
 ![view-add](screenshots/view-add.png)
-  - Test
+  - Test\
     ![test-add](screenshots/test-add.png)
-### Update car (dùng Get & Post (tương tự PutMapping))
-- Controller
+### Update car - dùng Get & Post (tương tự PutMapping); Không cho update id
+- Controller\
 ![controller-update](screenshots/controller-edit.png)
 ![view-edit](screenshots/view-edit.png)
-- update.html
+- update.html\
 ![view-update-html](screenshots/update-html.png)
-- Test
+- Test\
 ![test-update](screenshots/test-edit.png)
 ### Delete: dùng GetMapping delete và redirect lại home
 > Thêm modal: modal xuất hiện để confirm xóa car
-- Controller
+- Controller\
 ![controller-delete](screenshots/controller-delete.png)
   (Service & Repo chỉ đơn giản là xóa đi)
-- Thymeleaf:
-  - Button toggle modal:
-    - button
+- Thymeleaf:\
+  - Button toggle modal:\
+    - button\
   ![button](screenshots/view-button.png)
-    - modal
+    - modal\
   ![button](screenshots/view-modal.png)
-- Test: 
+- Test:\
 ![test-delete](screenshots/test-delete.png)
