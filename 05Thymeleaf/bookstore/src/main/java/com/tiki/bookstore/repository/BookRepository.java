@@ -3,8 +3,10 @@ package com.tiki.bookstore.repository;
 import com.tiki.bookstore.model.Book;
 import com.tiki.bookstore.model.Genre;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class BookRepository extends Repository<Book> {
 
@@ -19,5 +21,7 @@ public class BookRepository extends Repository<Book> {
     public List<Book> getAll() {
         return collections;
     }
+
+
 
 }

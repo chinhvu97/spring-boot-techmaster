@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<div id="feedback-form">
+    <h2 class="header">Update car</h2>
+    <div>
+        <form action="#" method="post" th:action="@{/update/{id}(id=${car.id})}" th:object="${car}">
+            <input type="text" name="id" placeholder="id" th:field="*{id}"></input>
+            <input type="text" name="manufacturer" placeholder="manufacturer" th:field="*{manufacturer}"></input>
+            <input type="text" name="model" placeholder="model" th:field="*{model}"></input>
+            <input type="text" name="price" placeholder="price" th:field="*{price}"></input>
+            <input type="text" name="sales" placeholder="sales" th:field="*{sales}"></input>
+            <input type="text" name="imgUrl" placeholder="imgUrl" th:field="*{imgUrl}"></input>
+            <button type="submit">Update Car</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

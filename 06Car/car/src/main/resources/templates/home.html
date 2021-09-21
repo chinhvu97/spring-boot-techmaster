@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container find">
+    <form action="#" method="get" th:action="@{/home}" >
+        <input type="text" name="keyword">
+        <button type="submit">Find</button>
+    </form>
+</div>
+<h3><a th:href="@{/add}">Add new car</a></h3>
+<div class="container">
+
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>image</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>price</th>
+            <th>sales</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="car: ${cars}">
+            <td class="image-container"><img th:src="${car.imgUrl}"/></td>
+
+            <td th:text="${car.manufacturer}"></td>
+            <td th:text="${car.model}"></td>
+            <td th:text="${car.price}"></td>
+            <td th:text="${car.sales}"></td>
+            <td><a th:href="@{/edit/{id}(id=${car.id})}">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${car.id})}">Delete</a></td>
+            <!--        <td th:text="${car.imageUrl}"></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

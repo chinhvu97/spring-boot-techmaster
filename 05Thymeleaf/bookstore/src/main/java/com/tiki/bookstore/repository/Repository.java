@@ -1,5 +1,7 @@
 package com.tiki.bookstore.repository;
 
+import com.tiki.bookstore.model.Book;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

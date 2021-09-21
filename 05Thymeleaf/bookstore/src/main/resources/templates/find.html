@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find</title>
+    <link rel="stylesheet" th:href="@{/css/form.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header th:insert="template.html :: topmenu"></header>
+
+<form action="#" th:action="@{/find}" th:object="${bmiRequest}" method="post">
+    <div class="inputbox">
+        <input type="text"  th:field="*{height}">
+        <span>Height (m)</span>
+    </div>
+    <div class="inputbox">
+        <button type="submit" class="modal-btn">Submit</button>
+    </div>
+</form>
+</body>
+</html>
